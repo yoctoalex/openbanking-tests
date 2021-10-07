@@ -1,0 +1,17 @@
+version: '3'
+services:
+  # openbanking:
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile.openbanking      
+  #   ports: 
+  #    - 8086:8080
+  #   hostname: openbanking.internal
+
+  postman:
+    build: 
+      context: .
+      dockerfile: Dockerfile.postman     
+    environment:
+      - BASE_URL=https://openbanking.f5.volt-demo.online
+      # - BASE_URL=https://your_ip_address:8086
